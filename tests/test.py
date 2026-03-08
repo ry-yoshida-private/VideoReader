@@ -1,16 +1,18 @@
 import unittest
 import os
 import cv2
+import numpy as np
 import tqdm
-from src.video_reader.video_reader import VideoReader
+from video_reader import VideoReader
 
 class TestVideoReader(unittest.TestCase):
 
     def setUp(self):
-        self.video_path = "test_video.mp4" # Replace with a path to a dummy video for testing
-        # Create a dummy frame image for testing
+        self.video_path = "test_video.mp4"
         self.frame_path = "test_frame.jpg"
-        dummy_frame = (255, 0, 0) # Red frame
+        # Create a dummy frame image (BGR, 480x640) for testing
+        dummy_frame = np.zeros((480, 640, 3), dtype=np.uint8)
+        dummy_frame[:, :] = (0, 0, 255)  # Red in BGR
         cv2.imwrite(self.frame_path, dummy_frame)
 
         # Create a dummy video file for testing

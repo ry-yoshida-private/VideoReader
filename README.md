@@ -5,7 +5,13 @@ It provides functionalities to read video frames sequentially with a specified f
 
 ## Installation
 
-You can install the required packages using pip:
+From the project root:
+
+```bash
+pip install -e .
+```
+
+Or install dependencies only (use when developing without installing the package):
 
 ```bash
 pip install -r requirements.txt
@@ -14,7 +20,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```python
-from src.video_reader.video_reader import VideoReader
+from video_reader import VideoReader
 import cv2
 
 # Initialize VideoReader with default values (start=0, freq=1)
