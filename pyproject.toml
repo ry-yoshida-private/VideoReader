@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "video_reader"
 version = "0.0.1"
 authors = [
-  { name="Ryuto Yoshida", email="your.email@example.com" },
+  { name="Ryuto Yoshida"},
 ]
 description = "Efficient video frame extraction and iteration with OpenCV."
 readme = "README.md"
